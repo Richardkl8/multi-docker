@@ -4,6 +4,7 @@
     <list default="true" id="27425a24-c206-4c90-ad9b-3c9d55ef4b91" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerrun.aws.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +96,8 @@
       <workItem from="1579203441007" duration="12357000" />
       <workItem from="1579247815080" duration="115000" />
       <workItem from="1579247942488" duration="2071000" />
-      <workItem from="1579328234667" duration="2115000" />
+      <workItem from="1579328234667" duration="5552000" />
+      <workItem from="1579362198112" duration="1020000" />
     </task>
     <servers />
   </component>
