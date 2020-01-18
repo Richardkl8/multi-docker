@@ -3,7 +3,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t -richardkl/react-test -f ./client/Dockerfile.dev ./client
+    - docker build -t richardkl/react-test -f ./client/Dockerfile.dev ./client
 
 script:
     # The -e flag stands for environment
