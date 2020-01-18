@@ -1,0 +1,25 @@
+sudo: required
+services:
+    - docker
+
+before_install:
+    - docker build -t -richardkl/react-test -f ./client/Dockerfile.dev ./client
+
+script:
+    # The -e flag stands for environment
+    - docker run -e CI=true richardkl/react-test npm run test
+
+after_success:
+    - docker build -t richardkl/multi-client ./client
+    - docker build -t richardkl/multi-nginx ./nginx
+    - docker build -t richardkl/multi-server ./server
+    - docker build -t richardkl/multi-worker ./worker
+
+    # Login to docker CLI. ENV variables are stored in the travis dashboard
+    # The '|' is used to get the output on the left side and use that for the command on the right side
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
+    # Push images to docker hub
+    - docker push richardkl/multi-client
+    - docker push richardkl/multi-nginx
+    - docker push richardkl/multi-server
+    - docker push richardkl/multi-worker
